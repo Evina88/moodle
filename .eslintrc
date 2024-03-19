@@ -113,8 +113,7 @@
       }
     ],
     "key-spacing": ["warn",
-      { "beforeColon": false, "afterColon": true, "mode": minimum
-      }
+      { "beforeColon": false, "afterColon": true, "mode": "minimum" }
     ],
     "keyword-spacing": "warn",
     "linebreak-style": ["error", "unix"
@@ -131,7 +130,7 @@
     "max-params": "off",
     "max-statements": "off",
     "max-statements-per-line": ["warn",
-      { max: 2
+      { "max": 2
       }
     ],
     "new-cap": ["warn",
@@ -191,8 +190,8 @@
     "promise/no-return-wrap": "warn",
     "promise/param-names": "warn",
     "promise/catch-or-return": ["warn",
-      {terminationMethod: ["catch", "fail", "always"
-        ], allowFinally: true
+      {"terminationMethod": ["catch", "fail", "always"
+        ], "allowFinally": true
       }
     ],
     "promise/no-native": "warn",
@@ -202,13 +201,13 @@
       {
         "object": "M",
         "property": "str",
-        "message": "Use "core/str" module or M.util.get_string()"
+        "message": "Use 'core/str' module or M.util.get_string()"
       }
     ],
   },
-  overrides: [
+  "overrides": [
     {
-      files: [
+      "files": [
         "**/yui/src/**/*.js"
       ],
       "env": {
@@ -216,7 +215,7 @@
         "es2020": false,
       },
       // Disable some rules which we can"t safely define for YUI rollups.
-      rules: {
+      "rules": {
         "no-undef": "off",
         "no-unused-vars": "off",
         "no-unused-expressions": "off",
@@ -238,7 +237,7 @@
       }
     },
     {
-      files: [
+      "files": [
         "**/amd/src/*.js",
         "**/amd/src/**/*.js",
         "Gruntfile.js",
@@ -248,9 +247,9 @@
       ],
       // We"re using babel transpiling so use their parser
       // for linting.
-      parser: "@babel/eslint-parser",
+      "parser": "@babel/eslint-parser",
       // Check AMD with some slightly stricter rules.
-      rules: {
+      "rules": {
         "no-implicit-globals": "error",
         // Disable all of the rules that have babel versions.
         "new-cap": "off",
@@ -292,7 +291,7 @@
         "jsdoc/require-property-name": "error",
         "jsdoc/require-property-type": "error"
       },
-      parserOptions: {
+      "parserOptions": {
         "sourceType": "module",
         "requireConfigFile": false
       }
